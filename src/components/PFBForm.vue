@@ -114,7 +114,8 @@ export default {
 
       try {
         let proxyport = process.env.PROXYPORT || 4454;
-        let url = 'http://localhost:' + proxyport + '/submit_pfb';
+        let server_domain = process.env.SERVERDOMAIN || 'http://localhost';
+        let url = server_domain + proxyport + '/submit_pfb';
         const response = await axios.post(
             url,
             {

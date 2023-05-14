@@ -8,6 +8,7 @@ cp .env.example .env
 ```
 and edit .env file to set your own config. 
 * PROXYPORT: the proxy server port, default is 4454.
+* SERVERDOMAIN: The ip or domain of the proxy server, default is http://localhost , if ip ,you can set it as http://xxx.xxx.xxx.xxx
 * NODE_URL: gateway API url, default is http://localhost:26659 , you can set it to your own. Remember the gateway should be open to public and the wallet should have balance to excute the transaction.
 
 ## Run in dev mode
