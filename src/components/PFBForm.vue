@@ -116,9 +116,7 @@ export default {
         let proxyport = process.env.VUE_APP_PROXYPORT || 4454;
         console.log(process.env.VUE_APP_SERVERDOMAIN)
         let server_domain = process.env.VUE_APP_SERVERDOMAIN || 'http://localhost';
-        console.log(server_domain)
         let url = server_domain + ":"+proxyport + '/submit_pfb';
-        console.log(url)
         const response = await axios.post(
             url,
             {
