@@ -15,7 +15,11 @@ if (!process.env.NODE_URL) {
     process.exit(1);
 }
 
-app.use(cors());
+app.use(cors({
+    origin: '*', // or your specific origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'node_url']
+}));
 
 app.use('/submit_pfb', (req, res, next) => {
     let TARGET_SERVER
